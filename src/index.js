@@ -12,8 +12,8 @@ function App() {
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
     setData(story[data]);
-    setFlipAnim(flipAnim ? false : true);
     if (story[data].teal) {
+      setFlipAnim(flipAnim ? false : true);
       setPoints(points => [...points, 'star']);
     }
   };
@@ -21,6 +21,9 @@ function App() {
   return (
     <div className="App">
       <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
+        {points.length === 0 ? (
+          <i className="nes-icon is-medium star is-empty" />
+        ) : null}
         {points.map(star => {
           return <i className="nes-icon is-medium star" />;
         })}
@@ -33,12 +36,16 @@ function App() {
       >
         <p className="nes-text is-primary text">{data.text}</p>
         <div className="buttons">
-          <button
-            className="nes-btn"
-            onClick={() => handleClick(data.button1 || 'end')}
-          >
-            next >
-          </button>
+          {data.buttons.map(button => {
+            return (
+              <button
+                className="button nes-btn"
+                onClick={() => handleClick(button.pointer || 'end')}
+              >
+                next >
+              </button>
+            );
+          })}
         </div>
       </Typist>
     </div>
