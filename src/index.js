@@ -32,7 +32,7 @@ function App() {
         className="text"
         key={data.text}
         cursor={{ show: false }}
-        avgTypingDelay={15}
+        avgTypingDelay={12}
       >
         <p className="nes-text is-primary text">{data.text}</p>
         <div className="buttons">
@@ -42,7 +42,7 @@ function App() {
                 className="button nes-btn"
                 onClick={() => handleClick(button.pointer || 'end')}
               >
-                next >
+                {button.text} >
               </button>
             );
           })}
