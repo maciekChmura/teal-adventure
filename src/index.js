@@ -23,10 +23,15 @@ function App() {
       <Score className="box" pose={flipAnim ? "pose1" : "pose2"}>
         {points.toString()}
       </Score>
-      <Typist key={data.text}>
-        <span>{data.text}</span>
+      <Typist className="text" key={data.text}>
+        <span className="nes-text is-primary text">{data.text}</span>
         <p />
-        <button onClick={() => handleClick(data.button1 || "end")}>next</button>
+        <button
+          className="nes-btn"
+          onClick={() => handleClick(data.button1 || "end")}
+        >
+          next >
+        </button>
       </Typist>
     </div>
   );
