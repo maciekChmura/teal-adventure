@@ -1,8 +1,17 @@
+* {
+  border: 1px solid orange;
+}
+
 .App {
   font-family: "Press Start 2P";
   text-align: center;
   font-size: 20px;
   box-sizing: border-box;
+  padding-top: 60px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
 }
 
 .Typist .Cursor {
@@ -25,12 +34,25 @@
   }
 }
 
-.box {
+.score {
   /* width: 100px; */
   /* height: 100px; */
   /* background: #ff1c68; */
+  display: flex;
+  justify-content: flex-end;
   color: #ff1c68;
   transform-origin: 50% 50%;
+}
+
+.text {
+  /* height: 300px; */
+  text-align: left;
+  
+
+}
+
+.buttons {
+  display: flex;
 }
 
 /* reset button styles https://css-tricks.com/overriding-default-button-styles/ */

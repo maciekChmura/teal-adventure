@@ -1,41 +1,49 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Typist from "react-typist";
-import Score from "./Score";
-import story from "./story";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import Typist from 'react-typist';
+import Score from './Score';
+import story from './story';
 
-import "./styles.css";
+import './styles.css';
 
 function App() {
   const [data, setData] = useState(story[1]);
-  const [points, setPoints] = useState(0);
+  const [points, setPoints] = useState([]);
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
     setData(story[data]);
     setFlipAnim(flipAnim ? false : true);
     if (story[data].teal) {
-      setPoints(points => points + 1);
+      setPoints(points => [...points, 'star']);
     }
   };
 
   return (
     <div className="App">
-      <Score className="box" pose={flipAnim ? "pose1" : "pose2"}>
-        {points.toString()}
+      <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
+        {points.map(star => {
+          return <i className="nes-icon is-medium star" />;
+        })}
       </Score>
-      <Typist className="text" key={data.text}>
-        <span className="nes-text is-primary text">{data.text}</span>
-        <p />
-        <button
-          className="nes-btn"
-          onClick={() => handleClick(data.button1 || "end")}
-        >
-          next >
-        </button>
+      <Typist
+        className="text"
+        key={data.text}
+        cursor={{ show: false }}
+        avgTypingDelay={15}
+      >
+        <p className="nes-text is-primary text">{data.text}</p>
+        <div className="buttons">
+          <button
+            className="nes-btn"
+            onClick={() => handleClick(data.button1 || 'end')}
+          >
+            next >
+          </button>
+        </div>
       </Typist>
     </div>
   );
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
