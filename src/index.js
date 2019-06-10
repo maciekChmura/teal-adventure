@@ -24,9 +24,9 @@ function App() {
         {points.length === 0 ? (
           <i className="nes-icon is-medium star is-empty" />
         ) : null}
-        {points.map(star => {
-          return <i className="nes-icon is-medium star" />;
-        })}
+        {points.map(star => (
+          <i className="nes-icon is-medium star" />
+        ))}
       </Score>
       <Typist
         className="text"
@@ -36,16 +36,14 @@ function App() {
       >
         <p className="nes-text is-primary text">{data.text}</p>
         <div className="buttons">
-          {data.buttons.map(button => {
-            return (
-              <button
-                className="button nes-btn"
-                onClick={() => handleClick(button.pointer || 'end')}
-              >
-                {button.text} >
-              </button>
-            );
-          })}
+          {data.buttons.map(button => (
+            <button
+              className="button nes-btn"
+              onClick={() => handleClick(button.pointer || 'end')}
+            >
+              {button.text} >
+            </button>
+          ))}
         </div>
       </Typist>
     </div>
