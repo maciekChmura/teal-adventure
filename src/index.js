@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import Score from './Score';
 import story from './story';
+import sound from './sounds/smb_powerup.wav';
 
 import './styles.css';
+
+const audio = new Audio(sound);
 
 function App() {
   const [data, setData] = useState(story[1]);
@@ -15,6 +18,7 @@ function App() {
     if (story[data].teal) {
       setFlipAnim(flipAnim ? false : true);
       setPoints(points => [...points, 'star']);
+      audio.play();
     }
   };
 
