@@ -10,7 +10,7 @@ import './styles.css';
 const audio = new Audio(sound);
 
 function App() {
-  const [data, setData] = useState(story[1]);
+  const [data, setData] = useState(story['a_1']);
   const [points, setPoints] = useState([]);
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
@@ -36,9 +36,11 @@ function App() {
         className="text"
         key={data.text}
         cursor={{ show: false }}
-        avgTypingDelay={12}
+        avgTypingDelay={60}
       >
-        <p className="nes-text is-primary text">{data.text}</p>
+        {data.text.map(text => (
+          <p className="nes-text is-primary text">{text}</p>
+        ))}
         <div className="buttons">
           {data.buttons.map(button => (
             <button
