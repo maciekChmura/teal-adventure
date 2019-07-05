@@ -50,6 +50,10 @@
   padding: 6px;
 }
 
+.narrator {
+  color: orange;
+}
+
 .buttons {
   display: flex;
   flex-direction: column;

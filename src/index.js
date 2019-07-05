@@ -38,9 +38,10 @@ function App() {
         cursor={{ show: false }}
         avgTypingDelay={60}
       >
-        {data.text.map(text => (
-          <p className="nes-text is-primary text">{text}</p>
-        ))}
+        {data.text &&
+          data.text.map(text => (
+            <p className="nes-text is-primary text">{text}</p>
+          ))}
         <div className="buttons">
           {data.buttons.map(button => (
             <button

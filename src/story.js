@@ -71,15 +71,31 @@ const story = {
   },
   c_1: {
     text: [
-      `[VB-2345] Create User Card component`,
-      `[VB-2345] Fix chart update performance`,
+      `[VB-2345] Create User card component`,
+      `[VB-2345] Fix chart performance on update`,
     ],
     buttons: [
-      { pointer: `c_2`, text: `pick the Card task` },
-      { pointer: `c_3`, text: `pick the charts performance task` },
+      { pointer: `c_2_1`, text: `pick the card task` },
+      { pointer: `c_3_1`, text: `pick the charts performance task` },
+      { pointer: `c_4_1`, text: `wait for Scrum Master to give me something` },
     ],
   },
-  end: {
+  c_2_1: {
+    text: [`This looks easy`, `Probably to easy...`, `and boring...`],
+    buttons: [{ pointer: `c_2_2`, text: `` }],
+  },
+  c_2_2: {
+    text: [
+      `I will work on something more demanding next time...`,
+      `It's Monday, let's chill`,
+    ],
+    buttons: [{ pointer: `end_bad`, text: `` }],
+  },
+  end_bad: {
+    text: [`Your score could be higher :)`, `Wanna try one more time?`],
+    buttons: [{ pointer: 'a_1', text: `yes` }],
+  },
+  end_good: {
     text: `end`,
     buttons: [{ pointer: 1, text: `again` }],
   },
