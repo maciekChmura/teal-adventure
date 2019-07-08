@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
+import ScrollToBottom from 'react-scroll-to-bottom';
 import Score from './Score';
 import story from './story';
 import sound from './sounds/smb_powerup.wav';
@@ -11,7 +12,7 @@ const audio = new Audio(sound);
 
 function App() {
   const [data, setData] = useState(story['a_1']);
-  // const [data, setData] = useState(story['c_2']);
+  // const [data, setData] = useState(story['a_6']);
   const [points, setPoints] = useState([]);
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
@@ -24,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <ScrollToBottom className="App">
       <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
         {points.length === 0 ? (
           <i className="nes-icon is-medium star is-empty" />
@@ -63,7 +64,7 @@ function App() {
           ))}
         </div>
       </Typist>
-    </div>
+    </ScrollToBottom>
   );
 }
 
