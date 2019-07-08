@@ -28,6 +28,13 @@ const story = {
   },
   a_6: {
     text: [`Maybe tomorrow...`, `time to get up...`],
+    info: [
+      `Welcome to a simple game about teal organizations`,
+      `A new way for groups and organizations to work together`,
+      `"The most exciting breakthroughs of the twenty-first century will not occur because of technology, but because of an expanding concept of what it means to be human."`,
+      `   `,
+      `John Naisbitt`,
+    ],
     buttons: [{ pointer: `b_1`, text: `` }],
   },
   b_1: {
@@ -141,16 +148,13 @@ const story = {
       `Inside an organization we all have the same goal`,
       `We ara a group of people who create value`,
       `Blaming somebody for doing bad job does not help`,
-      `Do not look for the guilty to punish him - look for the cause to remove it`,
-      `Maybe Mark done what he could at that point in time`,
+      `"Do not look for the guilty one to punish - look for the cause to remove it"`,
+      `Maybe Mark did the best he could, at that point in time`,
     ],
     buttons: [{ pointer: `c_4_2`, text: `` }],
   },
   c_5: {
-    text: [
-      `Wow this looks hard...`,
-      `Probably I will not be able to finish it on my own...`,
-    ],
+    text: [`Whats new on Facebook?`, `Awwwwww, this cat is sooooo  cute.`],
     info: [
       `As you can imagine this is not the best choice :)`,
       `In teal organizations you should be active with picking your work`,
@@ -164,17 +168,35 @@ const story = {
   },
   c_6: {
     text: [
-      `Why there are multiple request in the first place?`,
+      `Why are there multiple request in the first place?`,
       `... lets check backend...`,
     ],
     buttons: [{ pointer: `c_6_1`, text: `` }],
   },
   c_6_1: {
-    text: [
-      `Why there are multiple request in the first place?`,
-      `... lets check backend...`,
-    ],
+    text: [`Lots of simple routes`, `And the table structure is simple enough`],
     buttons: [{ pointer: `c_6_2`, text: `` }],
+  },
+  c_6_2: {
+    text: [
+      `These tables could use some associations...`,
+      `Quite easy task, especially that we use Sequelize`,
+    ],
+    buttons: [{ pointer: `c_6_3`, text: `` }],
+  },
+  c_6_3: {
+    text: [`Lets do this!`],
+    info: [
+      `You obviously consulted this database change with team lead :)`,
+      'Ater 2 days of refactoring, implementation and testing, route is ready',
+    ],
+    buttons: [{ pointer: `c_6_4`, text: `` }],
+  },
+  c_7: {
+    text: [
+      `Now it is time to refactor the React component to use the new route`,
+    ],
+    buttons: [{ pointer: `c_7_1`, text: `` }],
   },
   end_bad: {
     text: [`Your score could be higher :)`, `Wanna try one more time?`],

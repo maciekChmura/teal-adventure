@@ -50,6 +50,10 @@
   padding: 6px;
 }
 
+.grey {
+  color: grey;
+}
+
 .narrator {
   color: orange;
 }

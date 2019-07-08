@@ -11,6 +11,7 @@ const audio = new Audio(sound);
 
 function App() {
   const [data, setData] = useState(story['a_1']);
+  // const [data, setData] = useState(story['c_2']);
   const [points, setPoints] = useState([]);
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
@@ -36,14 +37,21 @@ function App() {
         className="text"
         key={data.text}
         cursor={{ show: false }}
-        avgTypingDelay={60}
+        // avgTypingDelay={60}
+        avgTypingDelay={10}
       >
-        {data.text &&
+        {data.text ? (
           data.text.map(text => (
             <p className="nes-text is-primary text">{text}</p>
-          ))}
-        {data.info &&
-          data.info.map(info => <p className="nes-text text">{info}</p>)}
+          ))
+        ) : (
+          <p />
+        )}
+        {data.info ? (
+          data.info.map(info => <p className="nes-text grey text">{info}</p>)
+        ) : (
+          <p />
+        )}
         <div className="buttons">
           {data.buttons.map(button => (
             <button
