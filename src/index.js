@@ -42,6 +42,8 @@ function App() {
           data.text.map(text => (
             <p className="nes-text is-primary text">{text}</p>
           ))}
+        {data.info &&
+          data.info.map(info => <p className="nes-text text">{info}</p>)}
         <div className="buttons">
           {data.buttons.map(button => (
             <button

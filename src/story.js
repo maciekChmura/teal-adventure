@@ -71,25 +71,110 @@ const story = {
   },
   c_1: {
     text: [
-      `[VB-2345] Create User card component`,
-      `[VB-2345] Fix chart performance on update`,
+      `[VB-2945] Add zoom controls to WebGL visualization component`,
+      `[VB-2782] Fix chart performance on update`,
+    ],
+    buttons: [{ pointer: `c_2`, text: `examine tasks` }],
+  },
+  c_2: {
+    text: [
+      `The zoom task looks super hard. WebGL is written in JavaScript but I don't know anything more about it, and I never worked in WebGL. On the other hand I like 3D... Should I pick it? Maybe I will learn new stuff...`,
+      `The chart task is not super obvious. There can be multiple reasons why the update is slow. Good thing I have experience in front and backend JavaScript. Hopefully I will be able to track this issue and fix it either way`,
     ],
     buttons: [
-      { pointer: `c_2_1`, text: `pick the card task` },
-      { pointer: `c_3_1`, text: `pick the charts performance task` },
-      { pointer: `c_4_1`, text: `wait for Scrum Master to give me something` },
+      { pointer: `c_3`, text: `pick the WebGL task` },
+      { pointer: `c_4`, text: `pick the chart performance task` },
+      { pointer: `c_5`, text: `wait for Scrum Master to give me something` },
     ],
   },
-  c_2_1: {
-    text: [`This looks easy`, `Probably to easy...`, `and boring...`],
-    buttons: [{ pointer: `c_2_2`, text: `` }],
-  },
-  c_2_2: {
+  c_3: {
     text: [
-      `I will work on something more demanding next time...`,
-      `It's Monday, let's chill`,
+      `Wow this looks hard...`,
+      `Probably I will not be able to finish it on my own...`,
     ],
-    buttons: [{ pointer: `end_bad`, text: `` }],
+    info: [
+      `As you can imagine this is not the best choice :)`,
+      `In teal organizations nobody is forced to pick a task`,
+      `You can pick what to work on based on these rules:`,
+      `1. you do what you are able to do,`,
+      `2. you do what is necessary,`,
+      `3. you are responsible for it,`,
+      `4. what you do, you can change, but with preservation of 1, 2 and 3.`,
+    ],
+    buttons: [{ pointer: `c_2`, text: `pick again` }],
+  },
+  c_4: {
+    text: [`Lets look into code and figure out what is happening here...`],
+    buttons: [{ pointer: `c_4_1`, text: `` }],
+  },
+  c_4_1: {
+    text: [
+      `Inside the component, there are multiple HTTP requests to fetch the data for charts`,
+      `then the data is combined one big object`,
+      `and used to display the chart`,
+      `... there are a lot of for loops here...`,
+    ],
+    buttons: [{ pointer: `c_4_2`, text: `` }],
+  },
+  c_4_2: {
+    text: [
+      `O(n) is far from optimal`,
+      `This is just ugly...`,
+      `Who wrote this in the first place?`,
+      `...`,
+      `It was Mark...`,
+      `Should I just tell him to fix this?`,
+    ],
+    buttons: [
+      { pointer: `c_4_3`, text: `tell Mark to fix this` },
+      { pointer: `c_6`, text: `investigate further` },
+    ],
+  },
+  c_4_3: {
+    text: [
+      `He should know better...`,
+      `I will just tell him how awful job he did!`,
+      `Maybe this will motivate him to do better next time`,
+    ],
+    info: [
+      `Not the best choice`,
+      `Inside an organization we all have the same goal`,
+      `We ara a group of people who create value`,
+      `Blaming somebody for doing bad job does not help`,
+      `Do not look for the guilty to punish him - look for the cause to remove it`,
+      `Maybe Mark done what he could at that point in time`,
+    ],
+    buttons: [{ pointer: `c_4_2`, text: `` }],
+  },
+  c_5: {
+    text: [
+      `Wow this looks hard...`,
+      `Probably I will not be able to finish it on my own...`,
+    ],
+    info: [
+      `As you can imagine this is not the best choice :)`,
+      `In teal organizations you should be active with picking your work`,
+      `You can pick a task based on these rules:`,
+      `1. you do what you are able to do,`,
+      `2. you do what is necessary,`,
+      `3. you are responsible for it,`,
+      `4. what you do, you can change, but with preservation of 1, 2 and 3.`,
+    ],
+    buttons: [{ pointer: `c_2`, text: `pick again` }],
+  },
+  c_6: {
+    text: [
+      `Why there are multiple request in the first place?`,
+      `... lets check backend...`,
+    ],
+    buttons: [{ pointer: `c_6_1`, text: `` }],
+  },
+  c_6_1: {
+    text: [
+      `Why there are multiple request in the first place?`,
+      `... lets check backend...`,
+    ],
+    buttons: [{ pointer: `c_6_2`, text: `` }],
   },
   end_bad: {
     text: [`Your score could be higher :)`, `Wanna try one more time?`],
