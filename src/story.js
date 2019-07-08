@@ -2,40 +2,49 @@ const story = {
   a_1: {
     text: [
       `Elon...,`,
-      `please, trust me!`,
+      `Please, trust me!`,
       `I'm an engineer...`,
-      `my calculations are correct`,
+      `My calculations are correct.`,
       `...`,
-      `just launch that rocket already!`,
+      `Just launch that rocket already!`,
     ],
-    buttons: [{ pointer: `a_2`, text: `` }],
+    buttons: [{ pointer: `a_2`, text: `launch!` }],
   },
   a_2: {
-    text: [`...`, `Whats this annoying sound?`],
+    text: [`...`, `Told you so.`],
     buttons: [{ pointer: `a_3`, text: `` }],
   },
   a_3: {
-    text: [`Elon??`, `...`, `...ring ring ring`],
+    text: [`...`, `Just look how it goes.`],
     buttons: [{ pointer: `a_4`, text: `` }],
   },
   a_4: {
-    text: [`...`],
+    text: [`...`, `Whats this annoying sound?`],
     buttons: [{ pointer: `a_5`, text: `` }],
   },
   a_5: {
-    text: [`This was a dream?!`, `nooooooooo...`],
+    text: [`Elon??`, `...`, `...ring ring ring`],
     buttons: [{ pointer: `a_6`, text: `` }],
   },
   a_6: {
-    text: [`Maybe tomorrow...`, `time to get up...`],
-    info: [`Do you know about Teal?`],
+    text: [`...`],
     buttons: [{ pointer: `a_7`, text: `` }],
   },
   a_7: {
+    text: [`This was a dream?!`, `Nooooooooo!!!`],
+    buttons: [{ pointer: `a_8`, text: `` }],
+  },
+  a_8: {
+    text: [`Maybe tomorrow...`, `Time to get up...`],
+    info: [`...`, `Hey`, `Have you heard about Teal?`],
+    buttons: [{ pointer: `a_9`, text: `` }],
+  },
+  a_9: {
     text: [`...`],
     info: [
-      `Welcome to a simple game about Teal Organizations`,
-      `A new way for groups and organizations to work together`,
+      `Welcome to a simple game about Teal Organizations.`,
+      `It is a new paradigm coined by by Frederic Laloux in his book on "Reinventing Organizations".`,
+      `A new way for groups and organizations to work together.`,
       `"The most exciting breakthroughs of the twenty-first century will not occur because of technology, but because of an expanding concept of what it means to be human."`,
       `   `,
       `John Naisbitt`,
@@ -44,9 +53,9 @@ const story = {
   },
   b_1: {
     text: [
-      `It's Monday`,
-      `...it looks hot outside`,
-      `...a quick commute, and ready to write some code`,
+      `It's Monday.`,
+      `...it looks hot outside.`,
+      `...a quick commute, and ready to write some code.`,
     ],
     buttons: [
       { pointer: `b_2`, text: `take the bus` },
@@ -56,20 +65,20 @@ const story = {
   b_2: {
     text: [
       `I'm glad I took the bus.`,
-      `It looks way to hot to ride the bike`,
-      `Those new buses has nice AC`,
+      `It looks way to hot to ride the bike.`,
+      `Besides, those new buses has nice AC.`,
     ],
     buttons: [{ pointer: `b_4`, text: `` }],
   },
   b_3: {
-    text: [`I'm glad I took the bike.`, `The weather is just perfect`],
+    text: [`I'm glad I took the bike.`, `The weather is just perfect.`],
     buttons: [{ pointer: `b_4`, text: `` }],
   },
   b_4: {
     text: [
       `Where is my ID?`,
       `OK`,
-      `Boot up the system and grab something to drink`,
+      `Time to boot up the system and grab something to drink.`,
     ],
     buttons: [
       { pointer: `b_5`, text: `coffee` },
@@ -78,7 +87,7 @@ const story = {
     ],
   },
   b_5: {
-    text: [`What's on the board?`, `...`, `Ohh, this looks interesting`],
+    text: [`What's on the board?`, `...`, `Ohh, this looks interesting.`],
     buttons: [{ pointer: `c_1`, text: `` }],
   },
   c_1: {
@@ -91,7 +100,7 @@ const story = {
   c_2: {
     text: [
       `The zoom task looks super hard. WebGL is written in JavaScript but I don't know anything more about it, and I never worked in WebGL. On the other hand I like 3D... Should I pick it? Maybe I will learn new stuff...`,
-      `The chart task is not super obvious. There can be multiple reasons why the update is slow. Good thing I have experience in front and backend JavaScript. Hopefully I will be able to track this issue and fix it either way`,
+      `The chart task is not obvious. There can be multiple reasons why the update is slow. Good thing I have experience in front and backend JavaScript. Hopefully I will be able to track this issue and fix it in either way`,
     ],
     buttons: [
       { pointer: `c_3`, text: `pick the WebGL task` },
@@ -106,7 +115,7 @@ const story = {
     ],
     info: [
       `As you can imagine this is not the best choice :)`,
-      `In teal organizations nobody is forced to pick a task`,
+      `In Teal Organizations nobody is forced to pick a task`,
       `You can pick what to work on based on these rules:`,
       `1. you do what you are able to do,`,
       `2. you do what is necessary,`,
@@ -122,31 +131,35 @@ const story = {
   },
   c_4_1: {
     text: [
-      `Inside the component, there are multiple HTTP requests to fetch the data for charts`,
-      `then the data is combined one big object`,
-      `and used to display the chart`,
+      `Inside the component, there are multiple HTTP requests to fetch the data for charts.`,
+      `Then the data is combined into a one big object,`,
+      `and used to display the chart.`,
       `... there are a lot of for loops here...`,
     ],
     buttons: [{ pointer: `c_4_2`, text: `` }],
   },
   c_4_2: {
     text: [
-      `O(n) is far from optimal`,
+      `O(n) is far from optimal.`,
       `This is just ugly...`,
       `Who wrote this in the first place?`,
       `...`,
       `It was Mark...`,
-      `Should I just tell him to fix this?`,
+      `Should I just ask him to fix this?`,
     ],
     buttons: [
-      { pointer: `c_4_3`, text: `tell Mark to fix this` },
+      {
+        pointer: `c_4_3`,
+        text: `ask Mark to fix this and have a disappointing face`,
+      },
       { pointer: `d_1`, text: `investigate further` },
     ],
   },
   c_4_3: {
     text: [
+      `How this even passed code review?`,
       `He should know better...`,
-      `I will just tell him how awful job he did!`,
+      `I will just tell him to rewrite the logic for combining data from response!`,
       `Maybe this will motivate him to do better next time`,
     ],
     info: [
@@ -177,7 +190,11 @@ const story = {
       `Why are there multiple request in the first place?`,
       `... lets check backend...`,
     ],
+    info: [
+      `"Do not look for the guilty one to punish - look for the cause to remove it"`,
+    ],
     buttons: [{ pointer: `d_2`, text: `` }],
+    teal: true,
   },
   d_2: {
     text: [`Lots of simple routes`, `And the table structure is simple enough`],
@@ -194,13 +211,13 @@ const story = {
     text: [`Lets do this!`],
     info: [
       `You obviously consulted this database schema change with team lead :)`,
-      'After 2 days of refactoring, implementation and testing, route is ready',
+      'After 2 days of refactoring, implementation and testing, a new API route is ready',
     ],
     buttons: [{ pointer: `d_5`, text: `` }],
   },
   d_5: {
     text: [
-      `Now it is time to refactor the React component to use the new route`,
+      `Now it is time to refactor the React component to use the new route.`,
     ],
     buttons: [
       { pointer: `d_6`, text: `refactor component` },
@@ -210,9 +227,9 @@ const story = {
   d_6: {
     text: [
       `Job done!`,
-      `There is only one request`,
-      `No need to iterate over data, and create one big object`,
-      `Performance is visibly better`,
+      `There is only one request.`,
+      `No need to iterate over data, and create one big object.`,
+      `Performance is visibly better.`,
     ],
     info: [`...`, `What if this task could be done with Mark?`],
     buttons: [{ pointer: `d_5`, text: `` }],
@@ -220,13 +237,13 @@ const story = {
   e_1: {
     text: [
       `- Hey Mark, you free now?`,
-      `I've changed the API route for chart data`,
-      `We could sit together and figure out how to refactor the component to fix its performance`,
+      `I've changed the API route for chart data.`,
+      `We could sit together and figure out how to refactor the component to fix its performance.`,
     ],
     info: [
       `Nice :D`,
-      `Not only you are fixing bugs, You are also acting as a mentor`,
-      `You are actively sharing knowledge and raising the whole team performance`,
+      `Not only you are fixing bugs, You are also acting as a mentor.`,
+      `You are actively sharing knowledge and raising the whole team performance.`,
       `"Don't be a supervisor - be a teacher, moderator and student."`,
     ],
     buttons: [{ pointer: `e_2`, text: `refactor component` }],
@@ -235,20 +252,20 @@ const story = {
   e_2: {
     text: [
       `Job done!`,
-      `There is only one request`,
-      `No need to iterate over data, and create one big object`,
-      `Performance is visibly better`,
-      `Pair programming went really well`,
-      `Now Mark is generally interested in learning more about backend`,
+      `There is only one request.`,
+      `No need to iterate over data, and create one big object.`,
+      `Performance is visibly better.`,
+      `Pair programming went really well.`,
+      `Now Mark is generally interested in learning more about backend.`,
     ],
     buttons: [{ pointer: `e_3`, text: `` }],
   },
   e_3: {
     text: [
-      `Fix is ready to be pushed`,
+      `Fix is ready to be pushed.`,
       `...`,
-      `It's not perfect for sure`,
-      `Some optimizations could still be done`,
+      `It's not perfect for sure.`,
+      `Some optimizations could still be done.`,
       `Should I dig deeper into this?...`,
     ],
     buttons: [
@@ -260,14 +277,14 @@ const story = {
     info: [
       `How much better can you make it?`,
       `It is easy to fall into trap of procrastination`,
-      `Something might look like work, but it might just be a way of postponing important things that actually matter`,
+      `Something might look like work, but it might just be a way of postponing important things that actually matter.`,
     ],
     buttons: [{ pointer: `e_3`, text: `` }],
   },
   f_2: {
     text: [`Hello team, please check this PR...`],
     info: [
-      `"Do not expect perfection that cannot be achieved - expect progress that is always possible,"`,
+      `"Do not expect perfection that cannot be achieved - expect progress that is always possible"`,
     ],
     buttons: [{ pointer: `g_1`, text: `` }],
     teal: true,

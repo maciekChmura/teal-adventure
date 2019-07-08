@@ -22,58 +22,59 @@ function App() {
       setPoints(points => [...points, 'star']);
       audio.play();
     }
+    if (data === 'a_1') {
+      setPoints([]);
+    }
   };
 
   return (
-    <ScrollToBottom className="App">
-      <div className="container">
-        <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
-          {points.length === 0 ? (
-            <i className="nes-icon is-medium star is-empty" />
-          ) : null}
-          {points.map(star => (
-            <i className="nes-icon is-medium star" />
+    <div className="App">
+      <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
+        {points.length === 0 ? (
+          <i className="nes-icon is-medium star is-empty" />
+        ) : null}
+        {points.map(star => (
+          <i className="nes-icon is-medium star" />
+        ))}
+      </Score>
+      <Typist
+        className="text"
+        key={data.text}
+        cursor={{ show: false }}
+        avgTypingDelay={50}
+        // avgTypingDelay={10}
+      >
+        {data.text ? (
+          data.text.map(text => (
+            <p key={text} className="nes-text is-primary text">
+              {text}
+            </p>
+          ))
+        ) : (
+          <p />
+        )}
+        {data.info ? (
+          data.info.map(info => (
+            <p key={info} className="nes-text grey text">
+              {info}
+            </p>
+          ))
+        ) : (
+          <p />
+        )}
+        <div className="buttons">
+          {data.buttons.map(button => (
+            <button
+              key={button.text}
+              className="button nes-btn"
+              onClick={() => handleClick(button.pointer || 'end')}
+            >
+              {button.text} >
+            </button>
           ))}
-        </Score>
-        <Typist
-          className="text"
-          key={data.text}
-          cursor={{ show: false }}
-          // avgTypingDelay={60}
-          avgTypingDelay={10}
-        >
-          {data.text ? (
-            data.text.map(text => (
-              <p key={text} className="nes-text is-primary text">
-                {text}
-              </p>
-            ))
-          ) : (
-            <p />
-          )}
-          {data.info ? (
-            data.info.map(info => (
-              <p key={info} className="nes-text grey text">
-                {info}
-              </p>
-            ))
-          ) : (
-            <p />
-          )}
-          <div className="buttons">
-            {data.buttons.map(button => (
-              <button
-                key={button.text}
-                className="button nes-btn"
-                onClick={() => handleClick(button.pointer || 'end')}
-              >
-                {button.text} >
-              </button>
-            ))}
-          </div>
-        </Typist>
-      </div>
-    </ScrollToBottom>
+        </div>
+      </Typist>
+    </div>
   );
 }
 
