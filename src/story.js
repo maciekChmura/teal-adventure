@@ -29,7 +29,7 @@ const story = {
   a_6: {
     text: [`Maybe tomorrow...`, `time to get up...`],
     info: [
-      `Welcome to a simple game about teal organizations`,
+      `Welcome to a simple game about Teal Organizations`,
       `A new way for groups and organizations to work together`,
       `"The most exciting breakthroughs of the twenty-first century will not occur because of technology, but because of an expanding concept of what it means to be human."`,
       `   `,
@@ -253,15 +253,18 @@ const story = {
   },
   f_1: {
     info: [
-      `"Do not expect perfection that cannot be achieved - expect progress that is always possible,"`,
+      `How much better can you make it?`,
       `It is easy to fall into trap of procrastination`,
       `Something might look like work, but it might just be a way of postponing important things that actually matter`,
     ],
     buttons: [{ pointer: `e_3`, text: `` }],
   },
   f_2: {
-    info: [`Hello team, please check this PR...`],
-    buttons: [{ pointer: ``, text: `` }],
+    text: [`Hello team, please check this PR...`],
+    info: [
+      `"Do not expect perfection that cannot be achieved - expect progress that is always possible,"`,
+    ],
+    buttons: [{ pointer: `end`, text: `` }],
     teal: true,
   },
   end: {
