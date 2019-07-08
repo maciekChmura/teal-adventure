@@ -113,6 +113,7 @@ const story = {
   c_4: {
     text: [`Lets look into code and figure out what is happening here...`],
     buttons: [{ pointer: `c_4_1`, text: `` }],
+    teal: true,
   },
   c_4_1: {
     text: [
@@ -134,7 +135,7 @@ const story = {
     ],
     buttons: [
       { pointer: `c_4_3`, text: `tell Mark to fix this` },
-      { pointer: `c_6`, text: `investigate further` },
+      { pointer: `d_1`, text: `investigate further` },
     ],
   },
   c_4_3: {
@@ -166,45 +167,106 @@ const story = {
     ],
     buttons: [{ pointer: `c_2`, text: `pick again` }],
   },
-  c_6: {
+  d_1: {
     text: [
       `Why are there multiple request in the first place?`,
       `... lets check backend...`,
     ],
-    buttons: [{ pointer: `c_6_1`, text: `` }],
+    buttons: [{ pointer: `d_2`, text: `` }],
   },
-  c_6_1: {
+  d_2: {
     text: [`Lots of simple routes`, `And the table structure is simple enough`],
-    buttons: [{ pointer: `c_6_2`, text: `` }],
+    buttons: [{ pointer: `d_3`, text: `` }],
   },
-  c_6_2: {
+  d_3: {
     text: [
       `These tables could use some associations...`,
       `Quite easy task, especially that we use Sequelize`,
     ],
-    buttons: [{ pointer: `c_6_3`, text: `` }],
+    buttons: [{ pointer: `d_4`, text: `` }],
   },
-  c_6_3: {
+  d_4: {
     text: [`Lets do this!`],
     info: [
-      `You obviously consulted this database change with team lead :)`,
-      'Ater 2 days of refactoring, implementation and testing, route is ready',
+      `You obviously consulted this database schema change with team lead :)`,
+      'After 2 days of refactoring, implementation and testing, route is ready',
     ],
-    buttons: [{ pointer: `c_6_4`, text: `` }],
+    buttons: [{ pointer: `d_5`, text: `` }],
   },
-  c_7: {
+  d_5: {
     text: [
       `Now it is time to refactor the React component to use the new route`,
     ],
-    buttons: [{ pointer: `c_7_1`, text: `` }],
+    buttons: [
+      { pointer: `d_6`, text: `refactor component` },
+      { pointer: `e_1`, text: `pair program with Mark` },
+    ],
   },
-  end_bad: {
-    text: [`Your score could be higher :)`, `Wanna try one more time?`],
-    buttons: [{ pointer: 'a_1', text: `yes` }],
+  d_6: {
+    text: [
+      `Job done!`,
+      `There is only one request`,
+      `No need to iterate over data, and create one big object`,
+      `Performance is visibly better`,
+    ],
+    info: [`...`, `What if this task could be done with Mark?`],
+    buttons: [{ pointer: `d_5`, text: `` }],
   },
-  end_good: {
+  e_1: {
+    text: [
+      `- Hey Mark, you free now?`,
+      `I've changed the API route for chart data`,
+      `We could sit together and figure out how to refactor the component to fix its performance`,
+    ],
+    info: [
+      `Nice :D`,
+      `Not only you are fixing bugs, You are also acting as a mentor`,
+      `You are actively sharing knowledge and raising the whole team performance`,
+      `"Don't be a supervisor - be a teacher, moderator and student."`,
+    ],
+    buttons: [{ pointer: `e_2`, text: `refactor component` }],
+    teal: true,
+  },
+  e_2: {
+    text: [
+      `Job done!`,
+      `There is only one request`,
+      `No need to iterate over data, and create one big object`,
+      `Performance is visibly better`,
+      `Pair programming went really well`,
+      `Now Mark is generally interested in learning more about backend`,
+    ],
+    buttons: [{ pointer: `e_3`, text: `` }],
+  },
+  e_3: {
+    text: [
+      `Fix is ready to be pushed`,
+      `...`,
+      `It's not perfect for sure`,
+      `Some optimizations could still be done`,
+      `Should I dig deeper into this?...`,
+    ],
+    buttons: [
+      { pointer: `f_1`, text: `spend more time on the task` },
+      { pointer: `f_2`, text: `push the fix for review` },
+    ],
+  },
+  f_1: {
+    info: [
+      `"Do not expect perfection that cannot be achieved - expect progress that is always possible,"`,
+      `It is easy to fall into trap of procrastination`,
+      `Something might look like work, but it might just be a way of postponing important things that actually matter`,
+    ],
+    buttons: [{ pointer: `e_3`, text: `` }],
+  },
+  f_2: {
+    info: [`Hello team, please check this PR...`],
+    buttons: [{ pointer: ``, text: `` }],
+    teal: true,
+  },
+  end: {
     text: `end`,
-    buttons: [{ pointer: 1, text: `again` }],
+    buttons: [{ pointer: 'a_1', text: `again` }],
   },
 };
 
