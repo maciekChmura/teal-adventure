@@ -26,44 +26,46 @@ function App() {
 
   return (
     <ScrollToBottom className="App">
-      <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
-        {points.length === 0 ? (
-          <i className="nes-icon is-medium star is-empty" />
-        ) : null}
-        {points.map(star => (
-          <i className="nes-icon is-medium star" />
-        ))}
-      </Score>
-      <Typist
-        className="text"
-        key={data.text}
-        cursor={{ show: false }}
-        // avgTypingDelay={60}
-        avgTypingDelay={10}
-      >
-        {data.text ? (
-          data.text.map(text => (
-            <p className="nes-text is-primary text">{text}</p>
-          ))
-        ) : (
-          <p />
-        )}
-        {data.info ? (
-          data.info.map(info => <p className="nes-text grey text">{info}</p>)
-        ) : (
-          <p />
-        )}
-        <div className="buttons">
-          {data.buttons.map(button => (
-            <button
-              className="button nes-btn"
-              onClick={() => handleClick(button.pointer || 'end')}
-            >
-              {button.text} >
-            </button>
+      <div className="container">
+        <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
+          {points.length === 0 ? (
+            <i className="nes-icon is-medium star is-empty" />
+          ) : null}
+          {points.map(star => (
+            <i className="nes-icon is-medium star" />
           ))}
-        </div>
-      </Typist>
+        </Score>
+        <Typist
+          className="text"
+          key={data.text}
+          cursor={{ show: false }}
+          // avgTypingDelay={60}
+          avgTypingDelay={10}
+        >
+          {data.text ? (
+            data.text.map(text => (
+              <p className="nes-text is-primary text">{text}</p>
+            ))
+          ) : (
+            <p />
+          )}
+          {data.info ? (
+            data.info.map(info => <p className="nes-text grey text">{info}</p>)
+          ) : (
+            <p />
+          )}
+          <div className="buttons">
+            {data.buttons.map(button => (
+              <button
+                className="button nes-btn"
+                onClick={() => handleClick(button.pointer || 'end')}
+              >
+                {button.text} >
+              </button>
+            ))}
+          </div>
+        </Typist>
+      </div>
     </ScrollToBottom>
   );
 }
