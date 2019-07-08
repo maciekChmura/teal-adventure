@@ -12,7 +12,7 @@ const audio = new Audio(sound);
 
 function App() {
   const [data, setData] = useState(story['a_1']);
-  // const [data, setData] = useState(story['a_6']);
+  // const [data, setData] = useState(story['f_2']);
   const [points, setPoints] = useState([]);
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
@@ -44,19 +44,26 @@ function App() {
         >
           {data.text ? (
             data.text.map(text => (
-              <p className="nes-text is-primary text">{text}</p>
+              <p key={text} className="nes-text is-primary text">
+                {text}
+              </p>
             ))
           ) : (
             <p />
           )}
           {data.info ? (
-            data.info.map(info => <p className="nes-text grey text">{info}</p>)
+            data.info.map(info => (
+              <p key={info} className="nes-text grey text">
+                {info}
+              </p>
+            ))
           ) : (
             <p />
           )}
           <div className="buttons">
             {data.buttons.map(button => (
               <button
+                key={button.text}
                 className="button nes-btn"
                 onClick={() => handleClick(button.pointer || 'end')}
               >

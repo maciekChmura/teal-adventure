@@ -28,6 +28,11 @@ const story = {
   },
   a_6: {
     text: [`Maybe tomorrow...`, `time to get up...`],
+    info: [`Do you know about Teal?`],
+    buttons: [{ pointer: `a_7`, text: `` }],
+  },
+  a_7: {
+    text: [`...`],
     info: [
       `Welcome to a simple game about Teal Organizations`,
       `A new way for groups and organizations to work together`,
@@ -264,11 +269,11 @@ const story = {
     info: [
       `"Do not expect perfection that cannot be achieved - expect progress that is always possible,"`,
     ],
-    buttons: [{ pointer: `end`, text: `` }],
+    buttons: [{ pointer: `g_1`, text: `` }],
     teal: true,
   },
-  end: {
-    text: `end`,
+  g_1: {
+    text: [`end`],
     buttons: [{ pointer: 'a_1', text: `again` }],
   },
 };
