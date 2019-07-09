@@ -19,7 +19,7 @@ const story = {
     buttons: [{ pointer: `a_4`, text: `` }],
   },
   a_4: {
-    text: [`...`, `Whats this annoying sound?`],
+    text: [`...`, `What is this annoying sound?`],
     buttons: [{ pointer: `a_5`, text: `` }],
   },
   a_5: {
@@ -43,8 +43,7 @@ const story = {
     text: [`...`],
     info: [
       `Welcome to a simple game about Teal Organizations.`,
-      `It is a new paradigm coined by by Frederic Laloux in his book on "Reinventing Organizations".`,
-      `A new way for groups and organizations to work together.`,
+      `It is a new paradigm coined by by Frederic Laloux in his book "Reinventing Organizations".`,
       `"The most exciting breakthroughs of the twenty-first century will not occur because of technology, but because of an expanding concept of what it means to be human."`,
       `   `,
       `John Naisbitt`,
@@ -126,6 +125,15 @@ const story = {
   },
   c_4: {
     text: [`Lets look into code and figure out what is happening here...`],
+    info: [
+      `Great choice.`,
+      `You picked a task that matches your skills`,
+      `In Teal there is a simple rule how to pick a task:`,
+      `1. you do what you are able to do,`,
+      `2. you do what is necessary,`,
+      `3. you are responsible for it,`,
+      `4. what you do, you can change, but with preservation of 1, 2 and 3.`,
+    ],
     buttons: [{ pointer: `c_4_1`, text: `` }],
     teal: true,
   },
@@ -160,15 +168,15 @@ const story = {
       `How this even passed code review?`,
       `He should know better...`,
       `I will just tell him to rewrite the logic for combining data from response!`,
-      `Maybe this will motivate him to do better next time`,
+      `Maybe this will motivate him to do better next time.`,
     ],
     info: [
-      `Not the best choice`,
-      `Inside an organization we all have the same goal`,
-      `We ara a group of people who create value`,
-      `Blaming somebody for doing bad job does not help`,
+      `Not the best choice.`,
+      `Inside an organization we all have the same goal.`,
+      `We ara a group of people who create value.`,
+      `Blaming somebody for doing bad job does not help.`,
       `"Do not look for the guilty one to punish - look for the cause to remove it"`,
-      `Maybe Mark did the best he could, at that point in time`,
+      `Maybe Mark did the best he could, at that point in time.`,
     ],
     buttons: [{ pointer: `c_4_2`, text: `` }],
   },
@@ -176,7 +184,7 @@ const story = {
     text: [`Whats new on Facebook?`, `Awwwwww, this cat is sooooo  cute.`],
     info: [
       `As you can imagine this is not the best choice :)`,
-      `In teal organizations you should be active with picking your work`,
+      `In teal organizations you should be active with picking your work.`,
       `You can pick a task based on these rules:`,
       `1. you do what you are able to do,`,
       `2. you do what is necessary,`,
@@ -191,19 +199,23 @@ const story = {
       `... lets check backend...`,
     ],
     info: [
+      `Cool!`,
       `"Do not look for the guilty one to punish - look for the cause to remove it"`,
     ],
     buttons: [{ pointer: `d_2`, text: `` }],
     teal: true,
   },
   d_2: {
-    text: [`Lots of simple routes`, `And the table structure is simple enough`],
+    text: [
+      `Lots of simple routes`,
+      `And the table structure is simple enough.`,
+    ],
     buttons: [{ pointer: `d_3`, text: `` }],
   },
   d_3: {
     text: [
       `These tables could use some associations...`,
-      `Quite easy task, especially that we use Sequelize`,
+      `Quite easy task, especially that we use Sequelize.`,
     ],
     buttons: [{ pointer: `d_4`, text: `` }],
   },
@@ -211,7 +223,7 @@ const story = {
     text: [`Lets do this!`],
     info: [
       `You obviously consulted this database schema change with team lead :)`,
-      'After 2 days of refactoring, implementation and testing, a new API route is ready',
+      'After 2 days of refactoring, implementation and testing, a new API route is ready.',
     ],
     buttons: [{ pointer: `d_5`, text: `` }],
   },
@@ -276,7 +288,7 @@ const story = {
   f_1: {
     info: [
       `How much better can you make it?`,
-      `It is easy to fall into trap of procrastination`,
+      `It is easy to fall into trap of procrastination.`,
       `Something might look like work, but it might just be a way of postponing important things that actually matter.`,
     ],
     buttons: [{ pointer: `e_3`, text: `` }],
