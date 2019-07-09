@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
+import TextDisplay from './TextDisplay';
+import ButtonDisplay from './ButtonDisplay';
 import ScrollToBottom from 'react-scroll-to-bottom';
 import Score from './Score';
 import story from './story';
@@ -12,7 +14,7 @@ const audio = new Audio(sound);
 
 function App() {
   const [data, setData] = useState(story['a_1']);
-  // const [data, setData] = useState(story['f_2']);
+  // const [data, setData] = useState(story['c_2']);
   const [points, setPoints] = useState([]);
   const [flipAnim, setFlipAnim] = useState(true);
   const handleClick = data => {
@@ -29,14 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <Score className="score" pose={flipAnim ? 'pose1' : 'pose2'}>
-        {points.length === 0 ? (
-          <i className="nes-icon is-medium star is-empty" />
-        ) : null}
-        {points.map(star => (
-          <i className="nes-icon is-medium star" />
-        ))}
-      </Score>
+      <Score points={points} pose={flipAnim ? 'pose1' : 'pose2'} />
       <Typist
         className="text"
         key={data.text}
