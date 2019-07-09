@@ -302,8 +302,29 @@ const story = {
     teal: true,
   },
   g_1: {
-    text: [`end`],
-    buttons: [{ pointer: 'a_1', text: `again` }],
+    text: [`THE END.`],
+    info: ['Nicely done!', `Was it silly, obvious and to easy?`],
+    buttons: [{ pointer: `g_2`, text: `yes yes yes!` }],
+  },
+  g_2: {
+    text: [`THE END..`],
+    info: [
+      `Main goal of this "game" experiment was to introduce you to the Teal paradigm.`,
+      `If you find it interesting I encourage you to learn more:`,
+      `reinventingorganizationswiki.com`,
+    ],
+    buttons: [{ pointer: `g_3`, text: `` }],
+  },
+  g_3: {
+    text: [`THE END...`],
+    info: [
+      `Thanks for playing :)`,
+      `Made by @maciekChmura`,
+      `http://maciek.cloud`,
+      `I am not affiliated in any ways with the author of this idea.`,
+      `Just a fan.`,
+    ],
+    buttons: [{ pointer: `a_1`, text: `play again?` }],
   },
 };
 
