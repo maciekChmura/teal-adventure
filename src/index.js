@@ -37,7 +37,7 @@ function App() {
       >
         {data.text ? (
           data.text.map(text => (
-            <p key={text} className="nes-text is-primary text">
+            <p key={text} className="nes-text teal text">
               {text}
             </p>
           ))
