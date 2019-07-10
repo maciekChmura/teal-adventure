@@ -32,8 +32,7 @@ function App() {
         className="text"
         key={data.text}
         cursor={{ show: false }}
-        avgTypingDelay={50}
-        // avgTypingDelay={10}
+        avgTypingDelay={30}
       >
         {data.text ? (
           data.text.map(text => (
