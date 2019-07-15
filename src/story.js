@@ -321,7 +321,6 @@ const story = {
       `Thanks for playing :)`,
       `Made by @maciekChmura`,
       `more info in console`,
-      `Just a fan.`,
     ],
     buttons: [{ pointer: `a_1`, text: `play again?` }],
   },
