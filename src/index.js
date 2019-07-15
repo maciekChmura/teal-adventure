@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import Typist from 'react-typist';
 import Score from './Score';
 import story from './story';
-import sound from './sounds/smb_powerup.wav';
+import sound from './sounds/smb_powerup_low.wav';
 
 import './styles.css';
+import ConsoleInfo from './ConsoleInfo';
 
 const audio = new Audio(sound);
 
@@ -64,6 +65,7 @@ function App() {
           ))}
         </div>
       </Typist>
+      <ConsoleInfo />
     </div>
   );
 }

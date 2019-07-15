@@ -320,8 +320,7 @@ const story = {
     info: [
       `Thanks for playing :)`,
       `Made by @maciekChmura`,
-      `http://maciek.cloud`,
-      `I am not affiliated in any ways with the author of this idea.`,
+      `more info in console`,
       `Just a fan.`,
     ],
     buttons: [{ pointer: `a_1`, text: `play again?` }],
