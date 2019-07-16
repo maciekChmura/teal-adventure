@@ -6,7 +6,6 @@ import story from './story';
 import sound from './sounds/smb_powerup_low.wav';
 
 import './styles.css';
-import ConsoleInfo from './ConsoleInfo';
 
 const audio = new Audio(sound);
 
@@ -65,7 +64,6 @@ function App() {
           ))}
         </div>
       </Typist>
-      <ConsoleInfo />
     </div>
   );
 }

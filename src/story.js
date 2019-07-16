@@ -114,7 +114,7 @@ const story = {
     ],
     info: [
       `As you can imagine this is not the best choice :)`,
-      `In Teal Organizations nobody is forced to pick a task`,
+      `In Teal Organizations nobody is forced to pick a task.`,
       `You can pick what to work on based on these rules:`,
       `1. you do what you are able to do,`,
       `2. you do what is necessary,`,
@@ -127,7 +127,7 @@ const story = {
     text: [`Lets look into code and figure out what is happening here...`],
     info: [
       `Great choice.`,
-      `You picked a task that matches your skills`,
+      `You picked a task that matches your skills.`,
       `In Teal there is a simple rule how to pick a task:`,
       `1. you do what you are able to do,`,
       `2. you do what is necessary,`,
@@ -223,7 +223,7 @@ const story = {
     text: [`Lets do this!`],
     info: [
       `You obviously consulted this database schema change with team lead :)`,
-      'After 2 days of refactoring, implementation and testing, a new API route is ready.',
+      'After 2 days of refactoring, implementation and testing, a new API is ready.',
     ],
     buttons: [{ pointer: `d_5`, text: `` }],
   },
@@ -249,7 +249,7 @@ const story = {
   e_1: {
     text: [
       `- Hey Mark, you free now?`,
-      `I've changed the API route for chart data.`,
+      `I've changed the API for chart data.`,
       `We could sit together and figure out how to refactor the component to fix its performance.`,
     ],
     info: [
@@ -290,6 +290,7 @@ const story = {
       `How much better can you make it?`,
       `It is easy to fall into trap of procrastination.`,
       `Something might look like work, but it might just be a way of postponing important things that actually matter.`,
+      `"Do not expect perfection that cannot be achieved - expect progress that is always possible"`,
     ],
     buttons: [{ pointer: `e_3`, text: `` }],
   },
