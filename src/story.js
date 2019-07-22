@@ -268,7 +268,7 @@ const story = {
       `No need to iterate over data, and create one big object.`,
       `Performance is visibly better.`,
       `Pair programming went really well.`,
-      `Now Mark is generally interested in learning more about backend.`,
+      `Now Mark is generally interested in learning more about the backend.`,
     ],
     buttons: [{ pointer: `e_3`, text: `` }],
   },
@@ -321,7 +321,7 @@ const story = {
     info: [
       `Thanks for playing :)`,
       `Made by @maciekChmura`,
-      `more info in console`,
+      `more info in the console`,
     ],
     buttons: [{ pointer: `a_1`, text: `play again?` }],
   },
